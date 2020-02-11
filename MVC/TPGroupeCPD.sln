@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPGroupeCPD", "TPGroupeCPD.csproj", "{DC229329-38E3-4C1D-9696-C0A495F9FF91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibTP", "..\LibTP\LibTP.csproj", "{2FEF62D5-2237-4E1F-8746-6260AFB41C38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC229329-38E3-4C1D-9696-C0A495F9FF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC229329-38E3-4C1D-9696-C0A495F9FF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC229329-38E3-4C1D-9696-C0A495F9FF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC229329-38E3-4C1D-9696-C0A495F9FF91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FEF62D5-2237-4E1F-8746-6260AFB41C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FEF62D5-2237-4E1F-8746-6260AFB41C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FEF62D5-2237-4E1F-8746-6260AFB41C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FEF62D5-2237-4E1F-8746-6260AFB41C38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDA5DD5C-B09A-4F4B-9D18-6D17A2AED5FB}
+	EndGlobalSection
+EndGlobal
