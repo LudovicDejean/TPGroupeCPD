@@ -5,7 +5,7 @@ using LibTP.Model;
 
 namespace LibTP.src
 {
-    interface IArticleRepo
+    public interface IArticleRepo
     {
         Article GetArticleByID(int ID);
         List<Article> GetAllArticles();

@@ -13,6 +13,11 @@ namespace LibTP
         public DbSet<PositionMagasin> positionMagasins { get; set; }
         public DbSet<Secteur> Secteurs { get; set; }
 
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
+        {
+
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             var ArticleEntity = modelBuilder.Entity<Article>();
@@ -52,12 +57,12 @@ namespace LibTP
             base.OnModelCreating(modelBuilder);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // définition de la base de données à utiliser ainsi que de la chaine de connexion
-            optionsBuilder.UseSqlServer("Server = localhost\\SQLEXPRESS01; Database = libTest; Trusted_Connection = True;");
+            //optionsBuilder.UseSqlServer("Server = localhost\\SQLEXPRESS01; Database = libTest; Trusted_Connection = True;");
 
             base.OnConfiguring(optionsBuilder);
-        }
+        }*/
     }
 }

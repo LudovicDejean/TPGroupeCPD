@@ -11,8 +11,12 @@ namespace LibTP.src.Controler
 {
     public class ArticleRepoEF : IArticleRepo
     {
-        public AppDbContext ctx = new AppDbContext();
+        private readonly AppDbContext ctx;
 
+        public ArticleRepoEF(AppDbContext ctx)
+        {
+            this.ctx = ctx;
+        }
         public Article GetArticleByID(int ID)
         {
             Article article = ctx.Articles.Where(q => q.Id == ID).First();
@@ -90,13 +94,6 @@ namespace LibTP.src.Controler
                     Etagere = etagere
                 };
             }
-        }
-
-        public List<Article> createArticle()
-        {
-            List<Article> articles = new List<Article>();
-
-            Article article = new()
         }
     }
 }

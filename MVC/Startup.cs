@@ -29,13 +29,18 @@ namespace TPGroupeCPD
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
             services.AddControllersWithViews();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
-            services.AddScoped<IIdentityFormater, StudentIdentityFormater>();
+            services.AddScoped<IArticleRepo, LibTP.src.Controler.ArticleRepoEF > ();
 
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Filename=asp.db"));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TPGroupeDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
