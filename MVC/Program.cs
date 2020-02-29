@@ -17,7 +17,6 @@ namespace TPGroupeCPD
     {
         public static void Main(string[] args)
         {
-
             var builder = CreateWebHostBuilder(args).Build();
             var dbContext = (AppDbContext)builder.Services.CreateScope().ServiceProvider.GetRequiredService(typeof(AppDbContext));
             dbContext.Database.EnsureCreated();

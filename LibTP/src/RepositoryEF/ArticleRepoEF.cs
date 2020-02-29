@@ -7,7 +7,7 @@ using System.Linq;
 using LibTP.Model;
 
 
-namespace LibTP.src.Controler
+namespace LibTP.src
 {
     public class ArticleRepoEF : IArticleRepo
     {

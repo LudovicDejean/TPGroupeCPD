@@ -38,7 +38,7 @@ namespace TPGroupeCPD
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
-            services.AddScoped<IArticleRepo, LibTP.src.Controler.ArticleRepoEF > ();
+            services.AddScoped<IArticleRepo, ArticleRepoEF > ();
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TPGroupeDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
         }

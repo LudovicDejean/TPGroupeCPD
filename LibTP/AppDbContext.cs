@@ -57,12 +57,5 @@ namespace LibTP
             base.OnModelCreating(modelBuilder);
         }
 
-        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            // définition de la base de données à utiliser ainsi que de la chaine de connexion
-            //optionsBuilder.UseSqlServer("Server = localhost\\SQLEXPRESS01; Database = libTest; Trusted_Connection = True;");
-
-            base.OnConfiguring(optionsBuilder);
-        }*/
     }
 }
