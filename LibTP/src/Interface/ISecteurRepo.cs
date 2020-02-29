@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LibTP.Model;
 
-namespace LibTP.src.Interface
+namespace LibTP.src
 {
     interface ISecteurRepo
     {
@@ -10,7 +11,6 @@ namespace LibTP.src.Interface
         void DelSecteur(Secteur Secteur);
         void UpdateSecteur(Secteur Secteur);
         Secteur GetSecteurByID(int ID);
-        Secteur GetSecteurByName(String name);
         List<Secteur> GetAllSecteurs();
     }
 }

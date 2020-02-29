@@ -18,7 +18,7 @@ namespace LibTP.src
             this.ctx = ctx;
         }
 
-        public SecteurRepoEF GetSecteurByID(int ID)
+        public Secteur GetSecteurByID(int ID)
         {
             Secteur secteur = ctx.Secteurs.Where(q => q.Id == ID).First();
             return secteur;
