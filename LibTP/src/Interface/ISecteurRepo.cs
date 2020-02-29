@@ -6,5 +6,8 @@ namespace LibTP.src
 {
     interface ISecteurRepo
     {
+        void AddSecteur(Secteur secteur);
+        void DelSecteur(Secteur Secteur);
+        void UpdateSecteur(Secteur Secteur);
     }
 }
