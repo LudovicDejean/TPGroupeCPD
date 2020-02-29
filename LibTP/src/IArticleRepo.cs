@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using LibTP.Model;
 
-namespace LibTP.src.Interface
+namespace LibTP.src
 {
     public interface IArticleRepo
     {

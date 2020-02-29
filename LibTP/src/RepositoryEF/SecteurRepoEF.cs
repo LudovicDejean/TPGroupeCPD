@@ -7,7 +7,7 @@ using System.Linq;
 using LibTP.Model;
 
 
-namespace LibTP.src.RepositoryEF
+namespace LibTP.src
 {
     public class SecteurRepoEF : ISecteurRepo
     {
