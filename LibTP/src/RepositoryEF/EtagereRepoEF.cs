@@ -17,12 +17,14 @@ namespace LibTP.src
 
         public void AddEtagere(Etagere etagere)
         {
-            throw new NotImplementedException();
+            ctx.Etageres.Add(etagere);
+            ctx.SaveChanges();
         }
 
         public void DelEtagere(Etagere etagere)
         {
-            throw new NotImplementedException();
+            ctx.Etageres.Remove(etagere);
+            ctx.SaveChanges();
         }
 
         public List<Etagere> GetAllEtageres()
@@ -46,8 +48,27 @@ namespace LibTP.src
 
         public void UpdateEtagere(Etagere etagere)
         {
-            ctx.Etagere.Update(etagere);
+            ctx.Etageres.Update(etagere);
             ctx.SaveChanges();
+        }
+        public void InsertEtagereInSecteur(Etagere etagere, Secteur secteur)
+        {
+            List<Etagere> EtagereInSecteur = GetEtageresBySecteur(secteur);
+
+            foreach (Etagere e in EtagereInSecteur)
+            {
+                if (e == etagere)
+                {
+                    Console.WriteLine("L'étagère existe déjà");
+                    return;
+                }
+                else
+                    EtagereInSecteur.Add(etagere);
+            }
+            Secteur s = new Secteur
+            {
+                Etageres = EtagereInSecteur
+            };
         }
     }
 }
