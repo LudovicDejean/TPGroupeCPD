@@ -46,7 +46,8 @@ namespace LibTP.src
 
         public void UpdateEtagere(Etagere etagere)
         {
-            throw new NotImplementedException();
+            ctx.Etagere.Update(etagere);
+            ctx.SaveChanges();
         }
     }
 }
