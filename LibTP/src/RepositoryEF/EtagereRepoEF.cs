@@ -54,7 +54,7 @@ namespace LibTP.src
         public void InsertEtagereInSecteur(Etagere etagere, Secteur secteur)
         {
             List<Etagere> EtagereInSecteur = GetEtageresBySecteur(secteur);
-
+            EtagereInSecteur.Exists();
             foreach (Etagere e in EtagereInSecteur)
             {
                 if (e == etagere)
