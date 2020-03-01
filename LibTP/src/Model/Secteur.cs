@@ -9,6 +9,6 @@ namespace LibTP.Model
     {
         public int Id { get; set; }
         public string Nom { get; set; }
-        public ICollection<Etagere> Etageres { get; set; }
+        public List<Etagere> Etageres { get; set; }
     }
 }

@@ -51,24 +51,21 @@ namespace LibTP.src
             ctx.Etageres.Update(etagere);
             ctx.SaveChanges();
         }
-        public void InsertEtagereInSecteur(Etagere etagere, Secteur secteur)
+        public bool InsertEtagereInSecteur(Etagere etagere, Secteur secteur)
         {
-            List<Etagere> EtagereInSecteur = GetEtageresBySecteur(secteur);
-            EtagereInSecteur.Exists();
-            foreach (Etagere e in EtagereInSecteur)
+            bool EtagereExist = false;
+
+            if (secteur.Etageres.Exists(p => p.Id == etagere.Id))
             {
-                if (e == etagere)
-                {
-                    Console.WriteLine("L'étagère existe déjà");
-                    return;
-                }
-                else
-                    EtagereInSecteur.Add(etagere);
+                EtagereExist = true;
             }
-            Secteur s = new Secteur
+            else
             {
-                Etageres = EtagereInSecteur
-            };
+                secteur.Etageres.Add(etagere);
+                etagere.Secteur = secteur;
+            }
+
+            return EtagereExist;
         }
     }
 }
