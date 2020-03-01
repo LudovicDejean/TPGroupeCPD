@@ -10,7 +10,7 @@ namespace LibTP.Model
         public decimal PoidsMaximum { get; set; }
         public int IdSecteur { get; set; }
         public ICollection<PositionMagasin> PositionMagasins { get; set; }
-        public PositionMagasin Position { get; set; }
+        public PositionMagasin Position { get; set; } 
         public Secteur Secteur { get; set; }
     }
 }

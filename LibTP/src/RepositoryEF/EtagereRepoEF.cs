@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibTP.src
 {
-    class EtagereRepoEFcs
+    class EtagereRepoEF
     {
     }
 }
