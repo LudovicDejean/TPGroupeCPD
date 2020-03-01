@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LibTP.src;
 using LibTP;
+using LibTP.Model;
 
 
 namespace TPGroupeCPD
