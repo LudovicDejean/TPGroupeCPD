@@ -77,11 +77,29 @@ body {
 
 .titre {
     position: absolute;
-    
 }
 
 .titreText {
     background: -webkit-linear-gradient(#FF00F3, #00FFFD);
+    /*background: -webkit-linear-gradient(#00FFFD, #FF00F3);*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+    background: #2f2d3a !important;
+    /*#343a40*/
+}
+
+.navbar-light .navbar-brand, .text-dark {
+    color: white !important;
+    transition: 1s;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #7ba2c8 !important
+}
+
+a.text-dark:hover {
+    color: #7ba2c8 !important;
 }
