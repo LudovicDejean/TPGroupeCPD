@@ -35,9 +35,9 @@ namespace TPGroupeCPD
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            services.AddMvc().AddRazorRuntimeCompilation().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             services.AddScoped<IArticleRepo, ArticleRepoEF > ();
 
