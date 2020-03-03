@@ -12,7 +12,6 @@ namespace LibTP.src
     public class SecteurRepoEF : ISecteurRepo
     {
         private readonly AppDbContext ctx;
-
         public SecteurRepoEF(AppDbContext ctx)
         {
             this.ctx = ctx;
