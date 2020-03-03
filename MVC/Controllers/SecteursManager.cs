@@ -10,13 +10,13 @@ using LibTP.Model;
 
 namespace TPGroupeCPD.Controllers
 {
-    public class SecteursController : Controller
+    public class SecteursManager : Controller
     {
         private readonly AppDbContext ctx;
 
-        public SecteursController(AppDbContext appDbContext)
+        public SecteursManager(AppDbContext appDbContext)
         {
-            ctx = appDbContext;
+            this.ctx = appDbContext;
         }
 
         // GET: Secteurs

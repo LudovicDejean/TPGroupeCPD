@@ -11,11 +11,11 @@ using LibTP.Model;
 
 namespace TPGroupeCPD.Controllers
 {
-    public class EtageresController : Controller
+    public class EtageresManager : Controller
     {
         private readonly AppDbContext ctx;
 
-        public EtageresController(AppDbContext appDbContext)
+        public EtageresManager(AppDbContext appDbContext)
         {
             ctx = appDbContext;
         }
@@ -23,8 +23,7 @@ namespace TPGroupeCPD.Controllers
         // GET: Etageres
         public async Task<IActionResult> Index()
         {
-            var appDbContext = ctx.Etageres.Include(e => e.Secteur);
-            return View(await appDbContext.ToListAsync());
+            return View(await ctx.Etageres.ToListAsync());
         }
 
         // GET: Etageres/Details/5
