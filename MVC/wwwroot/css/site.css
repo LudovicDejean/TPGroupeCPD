@@ -69,3 +69,19 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.imageAccueil {
+   
+    width: 100%
+}
+
+.titre {
+    position: absolute;
+    
+}
+
+.titreText {
+    background: -webkit-linear-gradient(#FF00F3, #00FFFD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
