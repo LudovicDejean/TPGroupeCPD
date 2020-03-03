@@ -10,13 +10,12 @@ using LibTP;
 using Microsoft.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 
-
 namespace TPGroupeCPD
 {
     public class Program
     {
         public static void Main(string[] args)
-        {
+        { 
             var builder = CreateWebHostBuilder(args).Build();
             var dbContext = (AppDbContext)builder.Services.CreateScope().ServiceProvider.GetRequiredService(typeof(AppDbContext));
             dbContext.Database.EnsureCreated();
