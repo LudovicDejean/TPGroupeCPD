@@ -6,7 +6,7 @@ using System.Text;
 
 namespace LibTP.src
 {
-    class EtagereRepoEF : IEtagereRepo
+    public class EtagereRepoEF : IEtagereRepo
     {
         private readonly AppDbContext ctx;
 

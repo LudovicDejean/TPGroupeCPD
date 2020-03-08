@@ -19,7 +19,7 @@ namespace TPGroupeCPD
             var builder = CreateWebHostBuilder(args).Build();
             var dbContext = (AppDbContext)builder.Services.CreateScope().ServiceProvider.GetRequiredService(typeof(AppDbContext));
             dbContext.Database.EnsureCreated();
-
+            
             builder.Run();
         }
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

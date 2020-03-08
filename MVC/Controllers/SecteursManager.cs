@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LibTP;
+using LibTP.src;
 using LibTP.Model;
 
 namespace TPGroupeCPD.Controllers
@@ -13,15 +14,26 @@ namespace TPGroupeCPD.Controllers
     public class SecteursManager : Controller
     {
         private readonly AppDbContext ctx;
+        private readonly SecteurRepoEF repo;
 
         public SecteursManager(AppDbContext appDbContext)
         {
             this.ctx = appDbContext;
-        }
+            this.repo = new SecteurRepoEF(ctx);
+
+        } 
 
         // GET: Secteurs
         public async Task<IActionResult> Index()
         {
+            /*List<decimal> prices = new List<decimal>();
+            List<Secteur> secteurs = await ctx.Secteurs.ToListAsync();
+            foreach(Secteur item in secteurs)
+            {
+                prices.Add(repo.GetAveragePriceBySecteur(item));
+            }
+            
+            ViewData["prices"] = prices.ToArray();*/
             return View(await ctx.Secteurs.ToListAsync());
         }
 
