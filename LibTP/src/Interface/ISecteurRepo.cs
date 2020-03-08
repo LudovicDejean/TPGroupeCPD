@@ -5,7 +5,7 @@ using LibTP.Model;
 
 namespace LibTP.src
 {
-    interface ISecteurRepo
+    public interface ISecteurRepo
     {
         void AddSecteur(Secteur secteur);
         void DelSecteur(Secteur Secteur);

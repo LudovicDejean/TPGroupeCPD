@@ -66,7 +66,7 @@ namespace LibTP.src
 
         public decimal GetAveragePriceBySecteur(Secteur secteur)
         {
-            List<Article> articles = GetArticlesBySecteur(secteur); ;
+            List<Article> articles = GetArticlesBySecteur(secteur);
             decimal AvgPrice = 0;
             
             foreach (Article article in articles)

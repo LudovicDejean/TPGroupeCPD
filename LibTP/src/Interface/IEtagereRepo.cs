@@ -5,7 +5,7 @@ using LibTP.Model;
 
 namespace LibTP.src
 {
-    interface IEtagereRepo
+    public interface IEtagereRepo
     {
         Etagere GetEtagereByID(int ID);
         List<Etagere> GetAllEtageres();
