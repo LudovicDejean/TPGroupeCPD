@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LibTP;
 using LibTP.Model;
+using LibTP.src;
 
 namespace TPGroupeCPD.Controllers
 {

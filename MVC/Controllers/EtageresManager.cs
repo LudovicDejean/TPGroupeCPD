@@ -156,5 +156,38 @@ namespace TPGroupeCPD.Controllers
         {
             return ctx.Etageres.Any(e => e.Id == id);
         }
+        public IActionResult AddArticle()
+        {
+            ViewData["IdArticle"] = new SelectList(ctx.Articles, "Id", "Id");
+            ViewData["IdEtagere"] = new SelectList(ctx.Etageres, "Id", "Id");
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddArticle([Bind("IdArticle,IdEtagere")] PositionMagasin position)
+        {
+            
+            SelectList listeIdArticle = new SelectList(ctx.Articles, "Id", "Id", position.IdArticle);
+            SelectList listeIdEtagere = new SelectList(ctx.Etageres, "Id", "Id", position.IdEtagere);
+            
+            foreach (PositionMagasin item in ctx.positionMagasins)
+            {
+                if (item.IdArticle == position.IdArticle && item.IdEtagere == position.IdEtagere)
+                {  
+                    return View();
+                }
+            }
+            if (ModelState.IsValid)
+            {
+                ctx.Add(position);
+                await ctx.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["IdArticle"] = listeIdArticle;
+            ViewData["IdEtagere"] = listeIdEtagere;
+            return View();
+        }
+
     }
 }

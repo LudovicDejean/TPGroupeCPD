@@ -1,0 +1,27 @@
+﻿@model LibTP.Model.PositionMagasin
+
+@{
+    ViewData["Title"] = "Ajout d'un article";
+}
+
+<h1>Ajout d'un article</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddArticle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdEtagere" class="control-label"></label>
+                <select asp-for="IdEtagere" class="form-control" asp-items="ViewBag.IdEtagere"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdArticle" class="control-label"></label>
+                <select asp-for="IdArticle" class="form-control" asp-items="ViewBag.IdArticle"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="AddArticle" class="btn btn-primary buttonAll" onclick="afficheMessage()"/>
+            </div>
+        </form>
+    </div>
+</div>
